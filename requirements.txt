@@ -3,6 +3,7 @@ pytesseract
 pillow
 transformers
 torch
-
+opencv-python
 openai
 python-dotenv
+pyzbar
