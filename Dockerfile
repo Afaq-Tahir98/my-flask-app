@@ -1,6 +1,6 @@
 FROM python:3.10-slim
 
-# Install system dependencies for pytesseract and OpenCV
+# Install system dependencies for pytesseract, OpenCV, and pyzbar
 RUN apt-get update && apt-get install -y \
     tesseract-ocr \
     libglib2.0-0 \
@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     libxext6 \
     libxrender-dev \
     libgl1-mesa-glx \
+    libzbar0 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
